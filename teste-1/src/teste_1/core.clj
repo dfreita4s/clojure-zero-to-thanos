@@ -1,6 +1,16 @@
 (ns teste-1.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x  "Hello, World!"))
+;; tdd
+;; tests
+
+(defn taxa-de-entrega
+  "valor < 100, entrega 15
+  100<=valor<200, entrega 5
+  valor<=200, entrega 0"
+  [valor-compra]
+  (if (< valor-compra 100)
+      15
+      (if (< valor-compra 200)
+        5
+        0)))
+
